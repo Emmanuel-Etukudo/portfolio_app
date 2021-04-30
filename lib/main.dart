@@ -241,6 +241,38 @@ class PortfolioApp extends StatelessWidget {
                               )
                             ],
                           ),
+                        ),
+                        Container(
+                          child: Row(
+                            children: [
+                              Container(
+                                margin: EdgeInsets.fromLTRB(20, 10, 0, 0),
+                                child: Align(
+                                  alignment: Alignment.topLeft,
+                                  child: Text(
+                                    'Stack',
+                                    style: TextStyle(
+                                        fontSize: 15,
+                                        color: Colors.black45,
+                                        fontWeight: FontWeight.normal),
+                                  ),
+                                ),
+                              ),
+                              Container(
+                                margin: EdgeInsets.fromLTRB(20, 10, 0, 0),
+                                child: Align(
+                                  alignment: Alignment.topLeft,
+                                  child: Text(
+                                    'Dart (Flutter), Java',
+                                    style: TextStyle(
+                                        fontSize: 15,
+                                        color: Colors.black,
+                                        fontWeight: FontWeight.normal),
+                                  ),
+                                ),
+                              )
+                            ],
+                          ),
                         )
 
 
