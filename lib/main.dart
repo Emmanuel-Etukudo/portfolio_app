@@ -1,3 +1,6 @@
+import 'dart:ui';
+
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -28,14 +31,75 @@ class PortfolioApp extends StatelessWidget {
                   bottom: 0,
                   right: 0,
                   child: Container(
-                    height: 400,
+                    height: MediaQuery.of(context).copyWith().size.height / 2,
                     width: MediaQuery.of(context).copyWith().size.width,
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.only(
-                          topLeft: Radius.circular(50.0),
-                          topRight: Radius.circular(50.0)
+                            topLeft: Radius.circular(60.0),
+                            topRight: Radius.circular(60.0)),
+                        color: Colors.white),
+                    child: Column(
+                      children: <Widget>[
+                        Center(
+                          child: Container(
+                            child: Text(
+                              'Etukudo Emmanuel, 23',
+                              textDirection: TextDirection.ltr,
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                  fontSize: 25,
+                                  color: Colors.black,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                            padding: EdgeInsets.fromLTRB(20, 20, 20, 10),
+                          ),
                         ),
-                        color: Colors.black87),
+                        Center(
+                          child: Container(
+                            child: Text(
+                              'Ibadan',
+                              style: TextStyle(
+                                  fontSize: 20,
+                                  color: Colors.black,
+                                  fontWeight: FontWeight.normal),
+                            ),
+                          ),
+                        ),
+                        Center(
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Container(
+
+                                child: ElevatedButton(
+                                  onPressed: () {},
+
+                                  style: ElevatedButton.styleFrom(
+                                    primary: Colors.blueGrey,
+                                    onPrimary: Colors.white
+                                  ),
+                                  child: Text('Rate'),
+                                ),
+                              ),
+                              Container(
+                                margin: EdgeInsets.fromLTRB(20, 0, 0, 0),
+                                child: ElevatedButton(
+                                  onPressed: () {},
+
+                                  style: ElevatedButton.styleFrom(
+                                    primary: Colors.blueGrey,
+                                    onPrimary: Colors.white
+                                  ),
+                                  child: Icon(
+                                    Icons.messenger
+                                  ),
+                                ),
+                              )
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ],
