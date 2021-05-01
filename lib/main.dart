@@ -14,16 +14,19 @@ class PortfolioApp extends StatelessWidget {
             child: Stack(
               fit: StackFit.loose,
               children: [
+                //Background layout
                 Container(
                   height: MediaQuery.of(context).copyWith().size.height,
                   width: MediaQuery.of(context).copyWith().size.width,
                   decoration: BoxDecoration(color: Colors.blueGrey),
                 ),
+                // Image layout
                 Container(
                   child: Image(
                     image: AssetImage('assets/profileimage.jpg'),
                   ),
                 ),
+                //Texts and buttons layout
                 Positioned(
                   bottom: 0,
                   right: 0,
@@ -37,10 +40,11 @@ class PortfolioApp extends StatelessWidget {
                         color: Colors.white),
                     child: Column(
                       children: <Widget>[
+                        //Name text layout
                         Center(
                           child: Container(
                             child: Text(
-                              'Etukudo Emmanuel, 23',
+                              'Etukudo Emmanuel',
                               textDirection: TextDirection.ltr,
                               textAlign: TextAlign.center,
                               style: TextStyle(
@@ -48,9 +52,10 @@ class PortfolioApp extends StatelessWidget {
                                   color: Colors.black,
                                   fontWeight: FontWeight.bold),
                             ),
-                            padding: EdgeInsets.fromLTRB(20, 20, 20, 10),
+                            padding: EdgeInsets.fromLTRB(20, 20, 20, 5),
                           ),
                         ),
+                        //Location text layout
                         Center(
                           child: Container(
                             child: Text(
@@ -62,6 +67,7 @@ class PortfolioApp extends StatelessWidget {
                             ),
                           ),
                         ),
+                        //Buttons layout
                         Center(
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
@@ -88,6 +94,7 @@ class PortfolioApp extends StatelessWidget {
                             ],
                           ),
                         ),
+                        //About text title layout
                         Container(
                           margin: EdgeInsets.fromLTRB(20, 20, 0, 0),
                           child: Align(
@@ -101,6 +108,7 @@ class PortfolioApp extends StatelessWidget {
                             ),
                           ),
                         ),
+                        //About text layout
                         Container(
                           margin: EdgeInsets.fromLTRB(20, 5, 0, 0),
                           child: Align(
@@ -114,6 +122,7 @@ class PortfolioApp extends StatelessWidget {
                             ),
                           ),
                         ),
+                        //Nationality text layout
                         Container(
                           child: Row(
                             children: [
@@ -146,6 +155,7 @@ class PortfolioApp extends StatelessWidget {
                             ],
                           ),
                         ),
+                        //Hometown text layout
                         Container(
                           child: Row(
                             children: [
@@ -178,6 +188,7 @@ class PortfolioApp extends StatelessWidget {
                             ],
                           ),
                         ),
+                        //University text layout
                         Container(
                           child: Row(
                             children: [
@@ -210,6 +221,7 @@ class PortfolioApp extends StatelessWidget {
                             ],
                           ),
                         ),
+                        //Language text layout
                         Container(
                           child: Row(
                             children: [
@@ -242,6 +254,7 @@ class PortfolioApp extends StatelessWidget {
                             ],
                           ),
                         ),
+                        //Stack text layout
                         Container(
                           child: Row(
                             children: [
@@ -250,7 +263,7 @@ class PortfolioApp extends StatelessWidget {
                                 child: Align(
                                   alignment: Alignment.topLeft,
                                   child: Text(
-                                    'Stack',
+                                    'Tech Stack',
                                     style: TextStyle(
                                         fontSize: 15,
                                         color: Colors.black45,
@@ -274,8 +287,6 @@ class PortfolioApp extends StatelessWidget {
                             ],
                           ),
                         )
-
-
                       ],
                     ),
                   ),
